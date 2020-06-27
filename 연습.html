@@ -3,7 +3,7 @@
 
 # 인용구
 <q></q> - 한 줄짜리 짧은 인용구
-<blockquote></blockquote> - 긴 인용문
+<blockquote></blockquote> - 긴 인용문(문단에 박스를 침)
 <cite></cite> -  인용문의 출처를 표시한다. 
 화면에서 특별히 표시되는 부분은 없지만, 검색엔진이 이 주소 정보를 사용할 수 있음. 
 보통 책, 영화, 그림 같은 작품의 제목을 지정할 때 주로 사용함. 
@@ -85,8 +85,18 @@ DATE: TTTT--MM-DD 형식으로 사용됨.
 
 <small></small> = 저작권 표시등 글씨를 작게 해줌
 
-# 속성 = attribute
+# 속성 = global attribute
 
 1. 링크 = <a herf=""></a> 
+1. lang = 요소의 언어를 정의하는데 도움을 준다. 
+2. class = 하나의 반복되는 스타일에 적용하여 정의를 해줌
+3. id = 반복되지 않고 세부적인 내용을 정의하기 위해 사용함(로고, 상단메뉴, 하단 정보 등등)
+4. <cite contentedittalbe = "true"> your name here</cite> = 브라우저를 사용하는 사람이 직접 내영을 수정할 수 있다.
 
-2. 
+dir = 텍스트 방향을 지정하는 속성이다
+dir="ltr" - 택스트를 왼쪽에서 오른쮹으로 표현한다
+dir-"rtl" = 텍스트를 오른쪽에서 왼쪽으로 표현한다
+dir="auto" =  브라우저의 설정값에 따른다. 
+
+ 
+잘 모르겠는 것 : ARIA role -> 1. aria-label, 2. aria-hidden="true" -> 시각장애인을 위해 한 단어로 화면 리더기가 읽을 수 있게 하는 기능? 
