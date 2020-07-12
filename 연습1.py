@@ -1,11 +1,6 @@
-a= 5
 
-b = 6
 
-print(a+b)
-
-@staticmethod
-def i
-
-(parameter_list):
-    pass
+# 무엇을 공부해볼까
+a=4
+b=4
+print (a+b)
