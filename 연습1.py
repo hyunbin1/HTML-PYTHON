@@ -68,6 +68,7 @@ print(nico)
 age = "18"
 print(age)
 print(type(age))
+#age라는 변수를 n_age라는 함수로 만들어주고 이것을 int를 사용해서 age라는 변수는 정수라고 정의해줌
 n_age = int(age)
 print(n_age)
 print(type(n_age))
