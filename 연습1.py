@@ -72,3 +72,12 @@ print(type(age))
 n_age = int(age)
 print(n_age)
 print(type(n_age))
+
+
+# function 만들기
+# funcion을 정의하기 = definition - 들여쓰기 주의하기
+# function에 ()하는 것은 ~를 실행한다 라는 뜻 = () = 실행 버튼을 누르기
+def say_hello():
+    print("hello")
+    print("bye")
+say_hello()
