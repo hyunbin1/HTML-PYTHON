@@ -64,3 +64,10 @@ print(nico)
 nico["handsome"] = True
 print(nico)
 
+# built in function - str(), int(), print(), len(), ... and so on
+age = "18"
+print(age)
+print(type(age))
+n_age = int(age)
+print(n_age)
+print(type(n_age))
