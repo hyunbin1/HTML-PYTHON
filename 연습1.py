@@ -13,7 +13,7 @@ print(type(a_number))
 #1. list
 #2. tuple 
 
-# ---- list-----
+# 1.---- list-----
 # 많은 값을 하나의 list에 저장해서 자신이 원하는 자료를 뽑아쓰게 만들자.
 # 안의 내용을 ""로 각각 묶어줘야 됨
 
@@ -37,3 +37,30 @@ print(days)
 days.reverse()
 print(days)
 # s.clear = list 내용 모두 지우기
+
+#2. ----tuple----
+#Immutable sequence = tuple = list와 다르게 common sequence operation만 사용 가능하다는 것
+# list = []로 감싸고 tuple은 ()로 감싸면 됨
+
+days = ("Mon","Tue","Wed","Thur","Fri")
+print(type(days))
+
+# 한 캐릭터를 만들때 = dictionary 만들기 - {} 중괄호 사용 = 모든 type을 넣을 수 있음 - 변수, 글자, boolean 등
+# 글자는 ""해주고 숫자는 그냥 사용
+
+nico = {
+    "name" : "Nico",
+    "Age": 29,
+    "korean" : True,
+    "fav_food" : ["kimchi","sashimi"]
+}
+
+print(nico)
+
+#nico name 만 가져오기
+print(nico["name"])
+
+print(nico)
+nico["handsome"] = True
+print(nico)
+
