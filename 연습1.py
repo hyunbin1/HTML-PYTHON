@@ -128,7 +128,7 @@ say_hello("hyun bin")
 def p_plus(a, b):
     print(a+b)
 
-def r_plus(a,b)
+def r_plus(a,b):
     return a + b
 
 p_result = p_plus(2,3)
@@ -137,4 +137,20 @@ r_result = r_plus(2,3)
 #p_result는 앞에서 return을 안해줬기 때문에 함수 자체는 print 할 수 없다. 
 print(p_result, r_result)
 
-#
+
+# f: 한 문장 안에서 내가 정의한 함수를 사용하고 싶을 때 "" 앞에 f 를 붙이고 정의한 인자에 {}로 해준다
+# 굳이 문장을 +로 나눌 필요도 없음
+def hi(name, age):
+    return f"Hello {name} you are {age} years old"
+
+hello = hi("nico", "12")
+print(hello)
+
+# 여러개의 인자가 있을 때 모든 순서를 기억하는것은 어렵다 따라서
+# keyword argument 을 사용해주자 - input하는 순서가 바뀌어도 노상관
+
+def hihi(name, age, are_from,fav_food):
+    return f"Hello {name} you are {age} you are from {are_from} you like {fav_food}"
+
+hello = hihi(name="nico", fav_food= "kimchi", age = 12, are_from = "seoul")
+print(hello)
