@@ -68,7 +68,8 @@ print(nico)
 age = "18"
 print(age)
 print(type(age))
-#age라는 변수를 n_age라는 함수로 만들어주고 이것을 int를 사용해서 age라는 변수는 정수라고 정의해줌
+#age라는 변수를 n_age라는 함수로 만들어주고 이것을 int를 사용해서 
+# age라는 변수는 정수라고 정의해줌
 n_age = int(age)
 print(n_age)
 print(type(n_age))
@@ -88,7 +89,8 @@ def plus(a, b):
     print(a+b)
 
 plus(2,5)
-# 이렇게 되면, a,b,c, 등등을 계속 정의 하지 않아도 plus만 사용하면 2개의 연산자를 계산 할 수 있다. 
+# 이렇게 되면, a,b,c, 등등을 계속 정의 하지 않아도 plus만 사용하면 
+# 2개의 연산자를 계산 할 수 있다. 
 
 # 이름 넣어보기
 def a(who):
@@ -105,7 +107,8 @@ minus(4,1)
 
 
 # default 값을 추가할 수 있움
-#인자 1개만 입력해도 실행 가능하다는 의미 - default 값 대신 다른것을 나중에 쓰면 default 값 말고 쓴 값이 나옴
+#인자 1개만 입력해도 실행 가능하다는 의미 - default 값 대신 다른것을 나중에 쓰면 
+# default 값 말고 쓴 값이 나옴
 def minus (a, b=2):
     print(a-b)
     minus(2)
@@ -116,4 +119,22 @@ def say_hello(name="anonymous"):
 
 say_hello()
 say_hello("hyun bin")
-    
+
+
+# ruturn = 어떤 function을 호출할 때 return을 사용하면 funcion이 return으로 치환이 됨
+# python에서 function을 ruturn 하는 순간 그 function은 종료가 된다
+# 따라서 오직 한번에 하나의 값만 return 할 수 있고 return 후에 사용한 문법들은 인지 X
+
+def p_plus(a, b):
+    print(a+b)
+
+def r_plus(a,b)
+    return a + b
+
+p_result = p_plus(2,3)
+r_result = r_plus(2,3)
+# r_result는 앞에서 r_plus가 return을 했기 때문에 2+3은 5로 치환해준다. 
+#p_result는 앞에서 return을 안해줬기 때문에 함수 자체는 print 할 수 없다. 
+print(p_result, r_result)
+
+#
