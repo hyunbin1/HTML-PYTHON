@@ -50,9 +50,9 @@ print(type(days))
 
 nico = {
     "name" : "Nico",
-    "Age": 29,
+    "Age": "29",
     "korean" : True,
-    "fav_food" : ["kimchi","sashimi"]
+    "fav_food" : ["kimchi","sashimi"],
 }
 
 print(nico)
@@ -81,3 +81,39 @@ def say_hello():
     print("hello")
     print("bye")
 say_hello()
+
+# function input - (이 안에 input 하고 싶은 내용을 넣어 주면 된다)
+
+def plus(a, b):
+    print(a+b)
+
+plus(2,5)
+# 이렇게 되면, a,b,c, 등등을 계속 정의 하지 않아도 plus만 사용하면 2개의 연산자를 계산 할 수 있다. 
+
+# 이름 넣어보기
+def a(who):
+    print("hello", who)
+
+a("김현빈")
+
+# a라는 function을 사용해서 ()안에  원하는 이름만 써주면 앞에서 정의한 print가 사용된다. 
+
+def minus(a,b):
+    print(a - b)
+
+minus(4,1)
+
+
+# default 값을 추가할 수 있움
+#인자 1개만 입력해도 실행 가능하다는 의미 - default 값 대신 다른것을 나중에 쓰면 default 값 말고 쓴 값이 나옴
+def minus (a, b=2):
+    print(a-b)
+    minus(2)
+
+def say_hello(name="anonymous"):
+    print("hello", name)
+
+
+say_hello()
+say_hello("hyun bin")
+    
