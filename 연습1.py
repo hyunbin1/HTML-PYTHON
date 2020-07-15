@@ -175,3 +175,18 @@ def age_check(age):
 age_check(23)
 
 
+# loof => for = 순차적인 작업을 할 때 좋음 = list와 같은 배열들을 순차적으로 가르킨다.
+# potato는 Mo된다 Tur 등이 되는 변수이다. 따라서 아무 단어나 들어가도 된다.
+# 하지만 days는 꼭 써줘야 된다
+days = ("Mon", "Tue", "Wed", "Thu", "Fri")
+
+for potato in days:
+    print(potato)
+
+#break = for문 멈추기
+
+for x in days:
+    if x in "Wed":
+        break
+    else:
+        print(x)
