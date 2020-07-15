@@ -154,3 +154,24 @@ def hihi(name, age, are_from,fav_food):
 
 hello = hihi(name="nico", fav_food= "kimchi", age = 12, are_from = "seoul")
 print(hello)
+
+# Boolean Operations - and, or, not
+# x or y = 하나만 충족
+# x and y = 둘다 충족
+# not x = x가 반드시 false
+
+def age_check(age):
+    print(f"you are {age}")
+    if age < 18:
+        print("you can't drink")
+    elif age == 18:
+        print("your now to this!")
+    elif age >20 and age <25:
+        print("you are sill kind of young")
+    else:
+        print("enjoy your drink")
+
+
+age_check(23)
+
+
