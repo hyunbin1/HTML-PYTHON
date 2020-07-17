@@ -26,8 +26,8 @@ print(days[2])
 # 몇개의 내용이 있는지 - list의 길이 알기 - len
 print(len(days))
 
-#Mutable = 우리가 값을 바꿀 수 있음
-#Immutable = 우리가 값을 바꿀 수 없음 
+# Mutable = 우리가 값을 바꿀 수 있음
+# Immutable = 우리가 값을 바꿀 수 없음 
 # list는 Mutable 이다. 
 # ex] s.append = 리스트에 내용 추가하기
 print(days)
@@ -190,3 +190,29 @@ for x in days:
         break
     else:
         print(x)
+
+
+# import = 어떤 기능들을 가져다가 쓰는 것
+# Modules = 그 기능들
+# MATE = ceil - 값을 올림해서 반환함
+# fabs = 절대값
+import math
+
+print(math.ceil(1.2))
+print(math.fabs(1.2))
+
+
+# 모든 module 을 깔기에는 비효율적이다 
+# from module import sum,ceil 형식을 사용하여 필요한 기능만 가져오자
+
+
+from math import fsum, ceil
+
+print (ceil(1.2))
+print(fsum([1,2,3,4,5,6,7]))
+
+# import 하면서 이름도 바꿔줄 수 있음
+# from math import fsum as wow
+# 서로 다른 파일에서도 기능을 가져올 수 있는데
+# from 파일명 import 가져올 함수 or 기능
+# 형식으로 사용하면 된다. 
