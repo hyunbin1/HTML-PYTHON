@@ -109,6 +109,7 @@ minus(4,1)
 # default 값을 추가할 수 있움
 #인자 1개만 입력해도 실행 가능하다는 의미 - default 값 대신 다른것을 나중에 쓰면 
 # default 값 말고 쓴 값이 나옴
+
 def minus (a, b=2):
     print(a-b)
     minus(2)
