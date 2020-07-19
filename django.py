@@ -147,11 +147,63 @@ def home(request):
     designers = Designer.objects.all()
     return render(request, 'home.html', {'designers' : desingers})
 
+#! PK (Primary Key)
+# Model을 통해 생성된 객체들을 구분할 수 있는 "고유한" key
 
 
+#! Path Convertor
+#여러 객체의 url을 "계층적으로" 다룰 수 있도록 도와주는 도구
+
+#! get_object_or_404
+#객체를 가져오려 했는데 없을 경우 나타나는 에러
 
 
+#! template 상속 
+#base.html만들어서 중복되는 부분을 다른 html 에서 중복적으로 표기 할 필요 없게 만들어줌
 
+
+#! CRUD
+
+# 1. CREATE
+# 새로운 객체를 생성해 Data를 저
+
+# 1) 객체 생성
+if request.method == "POST":
+    post - Designer()
+
+# 2) 입력 Data 저장
+
+post.name = request.POST['name']
+post.address = request.POST['address']
+
+# 3) 입력 Data 저장
+
+post.save
+
+# 2. UPDATE
+# 정보 수정이 필요한 객체를 찾아 Data를 새롭게 저장
+
+# 1) 객체 탐색
+post = get_object_or_404(Designer,pk = designer_id)
+if request.method == 'POST':
+
+# 2) 입력 Data 저장
+post.name = request.POST['name']
+post.address = request.POST['address']
+
+
+post.save()
+
+# 3. Delete
+
+# 1) 객체 탐색
+post = get_object_or_404(Designer,pk = designer_id)
+
+# 2) 객체 삭제
+post.delete()
+
+# 3) Home으로 이동
+return redirect('home')
 
 
 
