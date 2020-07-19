@@ -83,3 +83,65 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # 3. HTML에서 사용할 때 = 맨위에 {% load static %} 첨가해서 사용할 수 있게 만들기
 
+
+#! model을 통해 DB 생성하기!#
+# model = 데이터에 접속하고 관리하도록 도와주는 객체
+
+#? model 생성 & 적용
+
+# 1. models.py 
+#? 주의] 모델명의 첫 글자는 무조건 대문자!!!
+
+class Designer(models.Model):
+    image = models.ImageField(upload_to = 'images/')
+    # upload to = 'image/' = settings.py 에서 사용자가 media를 올리면 media 파일로 보낸다고 했는데
+    # 파일을 media에 있는 images에 올리겠다고 하는 의미
+    name = models.CharField(max_length = 50)
+    address = models.CharField(max_length = 255)
+    description = models.TextField()
+
+#? models 다음에 나온 것은 내용 형식을 지정해 준것임
+
+## Image_Field = 이미지가 들어오도록 필드를 만들어 주는것
+## CharField = 캐릭터 필드 = 길이가 많이 길지 않을때 사용 = 길이 제한 가능
+## TextField = 길이가 긴 곳에 사용된다
+
+
+# 2. terminal (DB는 django에 있는 model과 다르게 django와 별개이기 때문에 별도로 실행해준다.)
+
+## python manage.py makemigrations ( + app 이름 [특정한 앱만 관리할때 사용])
+# db가 알아들을 수 있도록 번역해주는것
+##python manage.py migrate ( + app 이름 [특정한 앱만 관리할때 사용])
+# 번역된 내용을 db에 알려주는 것
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
