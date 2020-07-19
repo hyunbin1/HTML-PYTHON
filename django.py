@@ -134,7 +134,18 @@ class Designer(models.Model):
 
 
 
+#! QuerySet
+# 전달받는 모델의 객체 목록
 
+# 1. home.html에 Model의 존재 알려주기
+from .models import Designer
+
+# 2. Queryset을 Templates로 보내기
+
+def home(request):
+    # Designer.objects,all() == 디자이너에 있는 모든 객체를 보낼 수 있게 만드는 Method이다. 
+    designers = Designer.objects.all()
+    return render(request, 'home.html', {'designers' : desingers})
 
 
 
