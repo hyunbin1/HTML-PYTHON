@@ -82,3 +82,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 #첨가해주기 = 사용자들이 올린 스테틱 파일들을 첨가할 수 있게 만들어 주는 것
 
 # 3. HTML에서 사용할 때 = 맨위에 {% load static %} 첨가해서 사용할 수 있게 만들기
+
