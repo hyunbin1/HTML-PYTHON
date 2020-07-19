@@ -100,7 +100,13 @@ class Designer(models.Model):
     address = models.CharField(max_length = 255)
     description = models.TextField()
 
-#? models 다음에 나온 것은 내용 형식을 지정해 준것임
+
+    # admin 안에서 model의 object의 이름이 아닌 우리가 작성한 name의 값을 반환해서 나타내 달라는 의미
+    def __str--(self):
+        return self.name
+
+
+#? models. 다음에 나온 것은 내용 형식을 지정해 준것임
 
 ## Image_Field = 이미지가 들어오도록 필드를 만들어 주는것
 ## CharField = 캐릭터 필드 = 길이가 많이 길지 않을때 사용 = 길이 제한 가능
@@ -108,11 +114,23 @@ class Designer(models.Model):
 
 
 # 2. terminal (DB는 django에 있는 model과 다르게 django와 별개이기 때문에 별도로 실행해준다.)
+## pip install pillow = djagno에서 이미지를 올리고 작업할때 활용할 수 있게 만듦.
 
 ## python manage.py makemigrations ( + app 이름 [특정한 앱만 관리할때 사용])
 # db가 알아들을 수 있도록 번역해주는것
 ##python manage.py migrate ( + app 이름 [특정한 앱만 관리할때 사용])
 # 번역된 내용을 db에 알려주는 것
+
+#! ADMIN 관리(생성)하기 !#
+
+# 1. 생성하기 
+## python manage.py createsuperuser ##
+
+# 2. admin.py 연결하기(위에)
+## from .models import Designer
+
+# 3. 아래에다가 첨가해주기
+## admin.site.register(Designer)
 
 
 
