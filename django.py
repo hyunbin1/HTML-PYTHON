@@ -1,9 +1,3 @@
-3강 : https://youtu.be/FqlLOgbUO-o
-4강 : https://youtu.be/UrmdIpXCn28
-5강 : https://youtu.be/th2Rlr_1WPc
-6강 : https://youtu.be/6VwvmI2uqNw
-7강 : https://youtu.be/x4NJfaSeYTA
-8강 : https://youtu.be/KExTQ4DY9hE
 
 #! django start
 
