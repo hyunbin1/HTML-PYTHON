@@ -16,7 +16,6 @@
 
 
 #! views
-
 def home(request):
     return render(request,'home.html')
 
@@ -157,6 +156,7 @@ def home(request):
 #! get_object_or_404
 #객체를 가져오려 했는데 없을 경우 나타나는 에러
 
+------------------------------------
 
 #! template 상속 
 #base.html만들어서 중복되는 부분을 다른 html 에서 중복적으로 표기 할 필요 없게 만들어줌
