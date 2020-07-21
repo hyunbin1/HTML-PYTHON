@@ -163,22 +163,71 @@ def home(request):
 #! get_object_or_404
 #객체를 가져오려 했는데 없을 경우 나타나는 에러
 #없는 글을 불러오려고 할때 오류를 제시함
-
+# views.py의 pk변수명과 urls.py의 pk변수명은 같아야함!!
 ## views.py
+ 
 from django.shortcuts import renter, get_object_or_404
 
-# def template이름(request, 모델 객체 정의한 이름)
-def detail(request, desgner_id):
+# def template이름(request, urls.py에서 모델 객체 정의한 이름)
+def detail(request, designer_id):
     designer = get_object_or_404(Designer,pk = designer_id)
-    return render(requenst, 'detial.html',{'designer' : designer})
+    return render(request, 'detail.html',{'designer' : designer})
 
 
+# 6강
 
-------------------------------------
+
+#! URL Include
+## App :
+App 폴더 내에 urls.py 생성후, 
+from django.urls import path
+from . import views
+
+# 프로젝트에 있는 urls.py에서 url patterns 중 app에 해당되는 urls만 가져오기
+Urlpatterns = [~~]
+
+## project/urls.py :
+# path옆에 include 추가해주기
+from django.urls import path, include
+
+# app이 가져간 urls 자리에 대신 첨가해준다 
+urlpatterns = [
+    path('url/',include('app이름.urls')),
+]
                    
 #! template 상속 
 #base.html만들어서 중복되는 부분을 다른 html 에서 중복적으로 표기 할 필요 없게 만들어줌
 
+## base.html :
+<head>
+    <link href-{% block link %}
+    
+    
+    {% endblock %}
+</head>
+<body>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+## home.html
+# 맨위에
+{% extends 'base.html' %}
+
+#? 새로운 링크 걸어줄때/덮어쓸때
+{% block link %}
+{% static 'css/home.css' %}
+{% endblock%}
+#이렇게 치면 base.html head 링크, endblock 사이에 들어가는 것과 같다
+
+#? 새로운 내용 첨가
+{% block content %}
+~~~
+{% endcblock %}
+# 이렇게 치면 base.html에 블럭 컨텐트, 엔드블록 사이에 들어가는 것과 같다. 
+#! 7강
 
 #! CRUD
 
