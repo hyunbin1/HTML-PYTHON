@@ -50,7 +50,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 ## 파일 첨가해주기
 
 # 3. static 파일들의 경로와, 담겨져있는 부분을 생성했으니 한곳으로 STATIC 파일 모아줘야 된다.(배포할때 한번만 해줘도 된다.)
-## python manage.py collectstatic`
+## python manage.py collectstatic
 
 # 4. home.html에 파일 경로 추가해주기
 #? 우리는 클라이언트와 서버를 왔다갔다 하는 부분을 만드는 것이기 때문에 모두 템플릿 태그를 사용해서 url을 설정해야 된다
@@ -225,8 +225,11 @@ urlpatterns = [
 #? 새로운 내용 첨가
 {% block content %}
 ~~~
-{% endcblock %}
+{% endblock %}
 # 이렇게 치면 base.html에 블럭 컨텐트, 엔드블록 사이에 들어가는 것과 같다. 
+
+
+
 #! 7강
 
 #! CRUD
