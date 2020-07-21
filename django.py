@@ -87,6 +87,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # model = 데이터에 접속하고 관리하도록 도와주는 객체
 
 #? model 생성 & 적용
+# 모델 생성 -> DB가 알아듣도록 번역 -> 번역한 내용을 DB에 적용
 
 # 1. models.py 
 #? 주의] 모델명의 첫 글자는 무조건 대문자!!!
@@ -101,7 +102,7 @@ class Designer(models.Model):
 
 
     # admin 안에서 model의 object의 이름이 아닌 우리가 작성한 name의 값을 반환해서 나타내 달라는 의미
-    def __str--(self):
+    def __str__(self):
         return self.name
 
 
@@ -148,16 +149,33 @@ def home(request):
 
 #! PK (Primary Key)
 # Model을 통해 생성된 객체들을 구분할 수 있는 "고유한" key
-
+# 각각의 글을 분류함
 
 #! Path Convertor
 #여러 객체의 url을 "계층적으로" 다룰 수 있도록 도와주는 도구
+# urls.py에서 글마다 path를 만들필요가 없게 해줌
+
+## urls.py : path(url 이름/<int:designer)id>/',views.detail,name = "detail")
+# 모델 객체 이름/pk를 변수로 설정해줘서 모든 객체 다룰수 있게 해줌
+
+## Template : {% url 'detail' designer.id %}
 
 #! get_object_or_404
 #객체를 가져오려 했는데 없을 경우 나타나는 에러
+#없는 글을 불러오려고 할때 오류를 제시함
+
+## views.py
+from django.shortcuts import renter, get_object_or_404
+
+# def template이름(request, 모델 객체 정의한 이름)
+def detail(request, desgner_id):
+    designer = get_object_or_404(Designer,pk = designer_id)
+    return render(requenst, 'detial.html',{'designer' : designer})
+
+
 
 ------------------------------------
-
+                   
 #! template 상속 
 #base.html만들어서 중복되는 부분을 다른 html 에서 중복적으로 표기 할 필요 없게 만들어줌
 
