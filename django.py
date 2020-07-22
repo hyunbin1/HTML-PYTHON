@@ -78,6 +78,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 ## urlpatterns =[] 끝에
 ## + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+
 #첨가해주기 = 사용자들이 올린 스테틱 파일들을 첨가할 수 있게 만들어 주는 것
 
 # 3. HTML에서 사용할 때 = 맨위에 {% load static %} 첨가해서 사용할 수 있게 만들기
@@ -118,7 +119,7 @@ class Designer(models.Model):
 
 ## python manage.py makemigrations ( + app 이름 [특정한 앱만 관리할때 사용])
 # db가 알아들을 수 있도록 번역해주는것
-##python manage.py migrate ( + app 이름 [특정한 앱만 관리할때 사용])
+## python manage.py migrate ( + app 이름 [특정한 앱만 관리할때 사용])
 # 번역된 내용을 db에 알려주는 것
 
 #! ADMIN 관리(생성)하기 !#
@@ -179,9 +180,9 @@ def detail(request, designer_id):
 
 #! URL Include
 ## App :
-App 폴더 내에 urls.py 생성후, 
-from django.urls import path
-from . import views
+App 폴더 내에 urls.py 생성후 
+from django.urls import path 
+from . import views 
 
 # 프로젝트에 있는 urls.py에서 url patterns 중 app에 해당되는 urls만 가져오기
 Urlpatterns = [~~]
@@ -205,6 +206,7 @@ urlpatterns = [
     
     {% endblock %}
 </head>
+
 <body>
 
     {% block content %}
@@ -235,7 +237,7 @@ urlpatterns = [
 #! CRUD
 
 # 1. CREATE
-# 새로운 객체를 생성해 Data를 저
+# 새로운 객체를 생성해 Data를 저장
 
 # 1) 객체 생성
 if request.method == "POST":
