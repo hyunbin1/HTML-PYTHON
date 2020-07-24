@@ -6,6 +6,7 @@
 
 #? django 시작하는 과정
 
+#! git ignore
 # .gitignore 폴더 생성해주기 -> gitignore.io에 들어가서 python,django, visual studio code를 첨가해준다
 # 모두 복붙한다음에 14번째줄 media 아래 - venv라고 추가해준다
 
